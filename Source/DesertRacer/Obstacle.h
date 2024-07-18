@@ -5,6 +5,7 @@
 
 #include "Components/CapsuleComponent.h"
 #include "PaperSpriteComponent.h"
+#include "MyGameMode.h"
 
 #include "Obstacle.generated.h"
 
@@ -19,6 +20,8 @@ public:
 
 	UPROPERTY(VisibleAnywhere, BlueprintReadWrite)
 	UPaperSpriteComponent* ObstacleSprite;
+
+	AMyGameMode* MyGameMode;
 
 	AObstacle();
 
