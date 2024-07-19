@@ -39,7 +39,9 @@ void AObstacle::OverlapBegin(UPrimitiveComponent* OverlappedComponent, AActor* O
 		{
 			Player->CanMove = false;
 
-			MyGameMode->ResetLevel(false);
+			UGameplayStatics::PlaySound2D(GetWorld(), HitSound);
+
+			MyGameMode->ResetLevel(IsFinishLine);
 		}
 	}
 }
